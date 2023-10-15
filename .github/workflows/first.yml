@@ -4,8 +4,8 @@ on:  push
 
 jobs:
   job1:
-    name:
-    runs-on:
+    name:  First Job
+    runs-on:  ubuntu-latest
     steps:
     -  name:  Step one
        uses:  actions/checkout@v2
@@ -14,8 +14,8 @@ jobs:
 
   
   job2:
-    name:
-    runs-on:
+    name:  Second Job
+    runs-on:  windows-latest
     steps:
     -  name:  Step one
        uses:  actions/checkout@v2
