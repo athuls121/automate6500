@@ -1,0 +1,44 @@
+name:  first
+
+on:  push
+
+jobs:
+  job1:
+    name:  First Job
+    runs-on:  ubuntu-latest
+    steps:
+    -  name:  Step one
+       uses:  actions/checkout@v2
+    -  name:  Step two
+       run:  date
+
+  job2:
+    name:  Second Job
+    runs-on:  windows-latest
+    steps:
+    -  name:  Step one
+       uses:  actions/checkout@v2
+    -  name:  Step two
+       run:  echo %date%
+
+  job3:
+    name:  Third Job
+    runs-on:  macos-latest
+    steps:
+    -  name:  Step one
+       uses:  actions/checkout@v2
+    -  name:  Step two
+       run:  date
+
+  job4:
+    name:  Fourth Job
+    runs-on:  ubuntu-20.04
+    steps:
+    -  name:  Step one
+       uses:  actions/checkout@v2
+    -  name:  Step two
+       run:  time
+    needs:  [job1, job2, job3]
+
+
+  
