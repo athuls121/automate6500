@@ -14,7 +14,9 @@ jobs:
          ref:  master
          path:  ./test_repo
     -  name:  Step two
-       run:  env | sort
+       run:  |
+            ls
+            env | sort
     -  name: Python Syntax Checker
        uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
 
