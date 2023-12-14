@@ -9,16 +9,12 @@ jobs:
     steps:
     -  name:  Step one
        uses:  actions/checkout@v2
+       with:
+         repository:  https://github.com/insightiq/ica2.git
+         ref: master
+         path:  ./test_repo
     -  name:  Step two
        run:  env | sort
     -  name: Python Syntax Checker
        uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
-  
-  job2:
-    name:  Second Job
-    runs-on:  windows-latest
-    steps:
-    -  name:  Step one
-       uses:  actions/checkout@v2
-    -  name:  Step two
-       run:  "Get-ChildItem Env:  |  Sort-Object Name"
+
