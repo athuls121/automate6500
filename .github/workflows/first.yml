@@ -10,8 +10,8 @@ jobs:
     -  name:  Step one
        uses:  actions/checkout@v2
        with:
-         repository:  https://github.com/insightiq/ica2.git
-         ref: master
+         repository:  insightiq/ica2
+         ref:  master
          path:  ./test_repo
     -  name:  Step two
        run:  env | sort
